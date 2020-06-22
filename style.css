@@ -1,0 +1,145 @@
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.offset-top--sm {
+  margin-top: 1rem;
+}
+
+.offset-bottom--sm {
+  margin-bottom: 1rem;
+}
+
+.offset-left--sm {
+  margin-left: 1rem;
+}
+
+.offset-right--sm {
+  margin-right: 1rem;
+}
+
+.header__tel {
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.header__tel a {
+  color: #eb5017;
+}
+
+.menu {
+  margin-left: 0;
+  padding-left: 0;
+}
+.menu__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.menu__list-item {
+  list-style-type: none;
+  background-color: #231f1f;
+  padding: 1rem;
+  flex-grow: 1;
+  text-align: center;
+  border-right: 1px solid #eb5017;
+}
+.menu__list-item:last-child {
+  border-right: none;
+}
+.menu__list-item:hover {
+  background-color: #eb5017;
+}
+.menu__list-item--active {
+  background-color: #eb5017;
+}
+.menu__link {
+  color: white;
+}
+.menu__link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.breadcrumb {
+  background-color: white;
+}
+.breadcrumb__link {
+  font-size: 15px;
+  color: black;
+  border-bottom: 1px solid black;
+}
+.breadcrumb__link:hover {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+.breadcrumb__link--active {
+  border-bottom: none;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.calc {
+  background-color: #f2f2f2;
+}
+.calc__wrapper {
+  padding-bottom: 1.5rem;
+}
+.calc__text {
+  color: #eb5017;
+  padding: 0.5rem 0rem 1.5rem 7rem;
+  font-size: 2.5rem;
+}
+.calc__list-input {
+  list-style-type: none;
+}
+.calc__input-item {
+  margin-bottom: 1rem;
+}
+.calc__button {
+  background-color: #85cc00;
+  color: #395306;
+  border-radius: 0.3rem;
+}
+.calc__res-text {
+  padding-left: 2rem;
+  font-weight: bold;
+  color: #395306;
+}
+.calc__res-text span {
+  color: black;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.footer {
+  background-color: #231f1f;
+}
+.footer__list {
+  display: flex;
+  padding: 1rem 5rem 3rem 5rem;
+  list-style-type: none;
+  color: white;
+}
+.footer__list-item {
+  padding-right: 2rem;
+}
+.footer__link {
+  color: white;
+  border-bottom: 1px solid white;
+}
+.footer__link:hover {
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="header__info offset-top--sm">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="logo">
+                            <a class="logo__link" href="#">
+                                <img src="logo.png" alt="" class="logo__img">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="wrapper float-right">
+                            <div class="header__tel">
+                                <a href="tel:8-800-100-5005">8-800-100-5005</a>
+                            </div>
+                            <div class="header__tel">
+                                <a href="tel:+7(3452)522-000">+7(3452)522-000</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="menu offset-top--sm offset-bottom--sm">
+                <ul class="menu__list offset-bottom--sm">
+                    <li class="menu__list-item">
+                        <a href="#" class="menu__link">Кредитные карты</a>
+                    </li>
+                    <li class="menu__list-item menu__list-item--active">
+                        <a href="#" class="menu__link">Вклады</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="#" class="menu__link">Дебетовая карта</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="#" class="menu__link">Страхование</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="#" class="menu__link">Друзья</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="#" class="menu__link">Интернет-банк</a>
+                    </li>
+                </ul>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item">
+                        <a href="#" class="breadcrumb__link">Главная</a>
+                    </li>
+                    &nbsp-&nbsp
+                    <li class="breadcrumb__item">
+                        <a href="#" class="breadcrumb__link">Вклады</a>
+                    </li>
+                    &nbsp-&nbsp
+                    <li class="breadcrumb__item">
+                        <a href="#" class="breadcrumb__link breadcrumb__link--active">Калькулятор</a>
+                    </li>
+                </ul>
+            </nav>  
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container-fluid offset-bottom--sm">
+            <div class="col-9">
+                <div class="calc">
+                    <div class="calc__wrapper">
+                        <div class="calc__text">
+                            Калькулятор
+                        </div>
+                        <form action="calc.php" method="POST">
+                            <div class="calc__list">
+                                <ul class="calc__list-input">
+                                    <li class="calc__input-item">
+                                        <label for="">Дата оформления вклада</label>
+                                        <input type="" name="depositDate" required>
+                                    </li>
+                                    <li class="calc__input-item">
+                                        <label for="">Сумма вклада</label>
+                                        <input type="text" value="10000" name="depositSum">
+                                        <input type="range" min="1000" max="3000000" step="1000" value="10000" id="depositSumRange">
+                                    </li>
+                                    <li class="calc__input-item">
+                                        <label for="">Срок вклада</label>
+                                        <select name="depositTerm" id="">
+                                            <option value="1">1 год</option>
+                                            <option value="2">2 года</option>
+                                            <option value="3">3 года</option>
+                                            <option value="4">4 года</option>
+                                            <option value="5">5 лет</option>
+                                        </select>
+                                    </li>
+                                    <li class="calc__input-item">
+                                        <label for="">Пополнение вклада</label>
+                                        <input type="radio" name="depositReplenishment" value="N" checked>Нет
+                                        <input type="radio" name="depositReplenishment" value="Y">Да
+                                    </li>
+                                    <li class="calc__input-item">
+                                        <label for="">Сумма пополнения вклада</label>
+                                        <input type="number" name="replenishmentSum" value="10000">
+                                        <input type="range" min="1000" max="3000000" step="1000" value="10000" id="replenishmentSumRange">
+                                    </li>
+                                    <li class="calc__input-item">
+                                        <input class="calc__button" type="submit" value="Рассчитать">
+                                        <label class="calc__res-text" for="">Результат: <span class="res"><span></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer offset-top--sm">
+        <ul class="footer__list">
+            <li class="footer__list-item">
+                <a href="#" class="footer__link">Кредитные карты</a>
+            </li>
+            <li class="footer__list-item">
+                <a href="#" class="footer__link">Вклады</a>
+            </li>
+            <li class="footer__list-item">
+                <a href="#" class="footer__link">Дебетовая карта</a>
+            </li>
+            <li class="footer__list-item">
+                <a href="#" class="footer__link">Страхование</a>
+            </li>
+            <li class="footer__list-item">
+                <a href="#" class="footer__link">Друзья</a>
+            </li>
+            <li class="footer__list-item">
+                <a href="#" class="footer__link">Интернет-банк</a>
+            </li>
+        </ul>
+    </footer>
+
+<script src="main.js"></script>
+</body>
+</html>
